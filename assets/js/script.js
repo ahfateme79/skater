@@ -1,14 +1,16 @@
-let tab = document.querySelectorAll('.tab ul li')
-let content = document.querySelectorAll('.content')
+
+// week
+let week = document.querySelectorAll('.week ul li')
+let hour = document.querySelectorAll('.hour-content')
 
 
-tab.forEach(n => {
+week.forEach(n => {
     n.addEventListener('click', (e) => {
-        for (let i = 0; i < tab.length; i++) {
-            tab[i].classList.remove('active')
+        for (let i = 0; i < week.length; i++) {
+            week[i].classList.remove('active')
         }
-        for (let d = 0; d < content.length; d++) {
-            content[d].classList.remove('active')
+        for (let d = 0; d < hour.length; d++) {
+            hour[d].classList.remove('active')
         }
         n.classList.add('active')
 
@@ -20,11 +22,3 @@ tab.forEach(n => {
 
 
 
-
-// menu
-let openbtn=document.querySelector('.open-btn')
-let menu=document.querySelector('.menu')
-
-openbtn.addEventListener('click',()=>{
-    menu.classList.toggle('open')
-})
