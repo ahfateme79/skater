@@ -3147,7 +3147,11 @@ footer {
         font-size: 13px;
     }
 }
-
+#zoom1{
+    width: 90%;
+    height: 570px;
+    object-fit: cover;
+}
 
 
 /* our team */
@@ -3286,7 +3290,21 @@ footer {
     opacity: .8;
     line-height: 1.8;
 }
-
+.hour-inp{
+    width: 100%;
+}
+.hour-inp input{
+    border: 1px solid #d4d4d4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    outline: none;
+    padding: 0 8px;
+}
+.hour-inp input::placeholder{
+    font-size: 12px;
+}
 .information ul {
     padding: 0;
     margin: 20px 0;
@@ -3535,7 +3553,7 @@ footer {
 
 .reserv-form input {
     width: 100%;
-    height: 58px;
+    height: 50px;
     margin-bottom: 20px;
     border: 1px solid #b6b4b4;
     padding: 0 20px;
@@ -3553,6 +3571,7 @@ footer {
     margin: 0 auto;
     font-size: 18px;
     color: #60666d;
+    height: 50px;
 }
 
 /* @media (min-width: 768px) {
@@ -3692,7 +3711,14 @@ footer {
 #reserv h3{
     margin-bottom: 50px;
 }
-
+.select-box__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding:12px 15px;
+    background-color: #fff;
+    font-size: 14px;
+}
 @media screen and (max-width:500px){
     #biography img {
         width: 100%;
@@ -3761,4 +3787,208 @@ footer {
         background-color: #fff;
         font-size: 13px;
     }
+}
+
+
+
+/* contact */
+#contact h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+#contact p{
+    font-size: 15px;
+    opacity: .8;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+.media-contact ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 20px;
+}
+.media-contact ul li{
+    margin: 0 0 0 20px;
+}
+.media-contact ul li a{
+    width: 35px;
+    height: 35px;
+    background-color: #FBBAA1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all .4s ease;
+}
+.media-contact ul li a:hover{
+    background-color: #2c2c2c;
+    transform: translateY(-5px);
+}
+.address-section p,.phone-section a,.email-section a{
+    margin: 30px 0 !important;
+    display: flex;
+    align-items: flex-start;
+    color: #2C2C2C;
+    opacity: .8;
+}
+.address-section i,.phone-section i,.email-section i{
+    margin: 7px 0 0 7px;
+    color: #474242;
+
+}
+@media screen and (min-width:768px) and (max-width:900px){
+    #contact h3{
+        font-size: 30px;
+    }
+    #contact p{
+        font-size: 13px;
+    }
+    
+}
+
+
+/* cart */
+thead {
+    background-color: #fafafa;
+}
+th{
+    border: none;
+}
+table {
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+    border-collapse: collapse; 
+}
+thead th{
+    text-align: right;
+    padding: 10px;
+}
+tbody tr td{
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.471);
+}
+tbody tr td img{
+    width: 100px;
+    height: 100px;
+}
+tbody tr td span{
+    font-size: 14px;
+    color: #333333ce;
+}
+tbody tr td button{
+    width: 25px;
+    height: 25px;
+    color: #f2f2f2;
+    font-size: 16px;
+    background-color: #2c2c2c;
+    border-radius: 100%;
+    border: none;
+}
+tbody tr td .quantity input{
+    height: 40px !important;
+}
+.coupon-box{
+    width: 350px;
+    display: flex;align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #2c2c2c;
+    background-color: #fff;
+    height: 50px;
+}
+.coupon-box input{
+    width: 75%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    margin: 0;
+    outline: none;
+}
+.coupon-box button{
+    width: 25%;
+    height: 55px;
+    background-color: #2C2C2C;
+    color: #fff;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: none;
+}
+.coupon-box button:hover{
+    background-color: #FBBAA1;
+
+}
+.coupon{
+    margin-top: 50px;
+}
+.total-box{
+    /* width: 450px; */
+    padding: 20px;
+    background-color: #f2f2f24f;
+
+}
+.total-box h3{
+    font-size: 25px;
+    width: 100%;
+    text-align: right;
+}
+.total-box ul{
+    margin: 30px 0;
+    padding: 0;
+}
+.total-box ul li{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2828281e;
+    opacity: .8;
+}
+.total-box button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 50px;
+    background-color: #FBBAA1;
+    color: #fff;
+    border: none;   
+
+}
+.total-box button:hover{
+    background-color: #2C2C2C;
+}
+
+@media screen and (max-width:500px){
+    tbody tr td img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+    tbody tr td span{
+        font-size: 12px;
+    }
+    tbody tr td button{
+        width: 18px;
+        height: 18px;
+        font-size: 14px;
+    }
+    th span{
+        font-size: 13px;
+    }
+    .coupon-box{
+        width: 100%;
+    }
+    .total td span{
+        font-size: 12px;
+    }    
 }

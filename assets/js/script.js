@@ -22,3 +22,13 @@ week.forEach(n => {
 
 
 
+// hour
+
+let hour_content=document.querySelectorAll('.hour-content p label')
+let hour_inp=document.querySelector(".hour-inp input")
+
+hour_content.forEach(n=>{
+    n.addEventListener('click',()=>{
+        hour_inp.value=n.innerHTML
+    })
+})
