@@ -1059,6 +1059,9 @@ footer {
     background: transparent;
     border: none;
     color: #fff;
+    height: 100%;
+    padding: 0 5px;
+    outline: none;
 }
 
 .email-box button {
@@ -1116,39 +1119,23 @@ footer {
 .hero {
     width: 100%;
     height: 100vh;
+    background-image: url(../img/logo/rev_slider_2_01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
     display: flex;
     align-items: center;
-    background-color: #212020;
     position: relative;
     overflow: hidden;
-}
-
-.smple {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    transform: scale(1.1);
-}
-
-.smple::after {
-    content: '';
-    background: linear-gradient(#212020, transparent);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    justify-content: flex-end;
+    transform: scaleX(-1);
 }
 
 .start {
     color: #fff;
     padding-top: 70px;
-
+    transform: scaleX(-1);
 }
-
 .start h1 {
     font-size: 58px;
     font-weight: bold
@@ -1158,7 +1145,7 @@ footer {
     opacity: .7;
     font-size: 16px;
     margin: 20px 0 30px 0;
-    width: 83%;
+    width: 43%;
     line-height: 1.9;
 }
 
@@ -1252,7 +1239,7 @@ footer {
 
 .menu {
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 0;
@@ -1260,11 +1247,19 @@ footer {
     visibility: hidden;
     transition: all .6s ease;
     overflow: hidden;
+    z-index: 100;
+    padding-top: 70px;
 }
-
+.close-btn{
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    font-size: 20px;
+}
 .menu.open {
     visibility: visible;
-    height: 300px;
+    height: 390px;
 }
 
 .menu ul {
@@ -1275,10 +1270,11 @@ footer {
 .menu ul li {
     margin: 20px 0;
     width: 100%;
-    border-bottom: 1px solid #393939;
     padding: 0 20px 15px 0;
 }
-
+.menu ul li:not(:last-child){
+    border-bottom: 1px solid #393939;
+}
 .menu ul li.active a {
     color: #FBBAA1;
 }
@@ -1289,8 +1285,9 @@ footer {
 }
 
 @media screen and (max-width:500px) {
-    header {
-        border-bottom: 1px solid #282828;
+    .hero{
+        height: 60vh;
+        background-position: center center;
     }
 
     .desktop-header {
@@ -1453,6 +1450,9 @@ footer {
 }
 
 @media screen and (min-width:500px) and (max-width:768px) {
+    .start p{
+        width: 70%;
+    }
     .logo img {
         width: 100px;
     }
@@ -1919,6 +1919,9 @@ footer {
     .product-card {
         margin: 15px auto;
         width: 90%;
+    }
+    .product-info div{
+        flex-direction: column;
     }
 }
 
@@ -3558,7 +3561,10 @@ footer {
     border: 1px solid #b6b4b4;
     padding: 0 20px;
 }
+input,textarea{
+    outline: none;
 
+}
 .reserv-form label {
     margin-bottom: 15px;
 }
@@ -3991,4 +3997,182 @@ tbody tr td .quantity input{
     .total td span{
         font-size: 12px;
     }    
+}
+
+
+/* about */
+
+.photo-about{
+    width: 90%;
+    height: 550px;
+    border: 2px solid #eea283;
+}
+.photo-about img{
+    width: 98%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-28px,30px);
+}
+.aboutus-details{
+    text-align: right;
+}
+.aboutus-details h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.aboutus-details p{
+    width: 90%;
+    font-size: 15px;
+    opacity: .8;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+#works {
+    background:#fafafa
+    /* background-image: url(../img/logo/bg_about_us_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+#about-desciption{
+    background-image: url(../img/logo/bg_about_us_03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.descriptions-section{
+    display: flex;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    align-items: center;
+}
+.descriptions-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.descriptions-section > div{
+    width: 50%;
+}
+.about-studio{
+    padding: 30px;
+}
+.about-studio span{
+    font-size: 12px;
+    color: #f49570;
+}
+.about-studio h2{
+    font-weight: bold;
+    margin: 15px 0;
+}
+.about-studio p{
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .8;
+}
+.about-studio ul{
+    padding: 0;
+    margin: 50px 0;
+}
+.about-studio ul li{
+    margin: 15px 0;
+    font-size: 14px;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+}
+.about-studio ul li::before{
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: #f49570;
+    display: inline-block;
+    margin-left: 7px;
+}
+#people.people-section{
+    background-color: #fff;
+    color: #2C2C2C;
+}
+#people.people-section .people p,#people.people-section .people span{
+    color: #2C2C2C;
+
+}
+
+@media screen and (max-width:768px){
+    .aboutus-details{
+        margin-top: 50px;
+    }
+    .aboutus-details p{
+        width: 100%;
+    }
+    .descriptions-section{
+        flex-direction: column;
+    }
+    .descriptions-section > div{
+        width: 100%;
+    }
+}
+
+/* login */
+
+.login-section{
+    width: 50%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.login-section input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: 50px;
+}
+.login-section label{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.login-section form > div{
+    margin-bottom: 20px;
+}
+.forget-password{
+    color: #f76b6b;
+    font-size: 14px;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+    background-color: #f49570;
+    color: #fff;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.login:hover{
+    background-color: #2C2C2C;
+}
+#login{
+    padding-top: 0;
+}
+#login h3{
+    font-size: 25px;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+@media screen and (max-width:500px){
+    #login h3,.login-section{
+        width: 100%;
+    }
+}
+@media screen and (min-width:500px) and (max-width:800px){
+    #login h3,.login-section{
+        width: 80%;
+    }
+
 }

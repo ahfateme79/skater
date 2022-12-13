@@ -68,6 +68,9 @@
                             <button class="btns open-btn"><i class="fa-solid fa-bars"></i></button>
                         </div>
                         <div class="menu">
+                            <div>
+                                <button class="btns close-btn"><i class="fa-solid fa-close"></i></button>
+                            </div>
                             <ul>
                                 <li><a href="">خانه</a></li>
                                 <li><a href="">درباره ما</a></li>
@@ -517,7 +520,7 @@
 
                                 <div class="hour-inp">
                                     <form action="">
-                                        <input type="text" placeholder="ساعت را انتخاب کنید">
+                                        <input type="text" readonly placeholder="ساعت را انتخاب کنید">
                                     </form>
                                 </div>
                             </div>
@@ -733,8 +736,10 @@
         // menu
         let openBtn = document.querySelector('.open-btn')
         let menu = document.querySelector('.menu')
+        let close = document.querySelector('.close-btn')
 
         openBtn.addEventListener('click', menuhandle)
+        close.addEventListener('click', menuhandle)
 
         function menuhandle() {
             menu.classList.toggle('open')
