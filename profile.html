@@ -111,8 +111,7 @@
             <div class="row">
                 <div class="col">
                     <div class="banner-detals">
-                        <h1>فروشگاه</h1>
-                        <p>خانه / <span>فروشگاه</span></p>
+                        <h1>حساب کاربری</h1>
                     </div>
                 </div>
             </div>
@@ -122,167 +121,115 @@
     <!-- end banner -->
 
 
-    <!-- start shop sectopn -->
+    <!-- start account -->
 
-    <section id="shop">
+    <section id="profile">
         <div class="container">
-            <div class="row g-3">
-                <div class="col-md-5 col-lg-4">
-                    <div class="aside">
-                        <div class="saller">
-                            <img src="./assets/img/logo/IMG_20221124_212538_513.jpg" alt="">
-                            <p>Eyora Studio یک استودیوی مراقبت از پوست (از جمله اکستنشن مژه) و محصولات مراقبت از پوست
-                                درجه یک است.</p>
-                                <ul>
-                                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                                </ul>
-                        </div>
-
-                        <!-- category -->
-                        <div class="category">
-                            <h4>دسته بندی ها</h4>
-                            <ul>
-                                <li><a href="">برای مردان</a></li>
-                                <li><a href="">برای زنان</a></li>
-                                <li><a href="">مراقبتی</a></li>
+            <div class="account_dashboard">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-lg-3">
+                        <!-- Nav tabs -->
+                        <div class="dashboard_tab_button">
+                            <ul role="tablist" class="nav flex-column dashboard-list" id="nav-tab">
+                                <li> <a href="#dashboard" data-toggle="tab" class="nav-link active">داشبورد</a></li>
+                                <li> <a href="#orders" data-toggle="tab" class="nav-link">سفارشات</a></li>
+                                <li><a href="#address" data-toggle="tab" class="nav-link">آدرس ها</a></li>
+                                <li><a href="#account-details" data-toggle="tab" class="nav-link">جزئیات حساب</a></li>
+                                <li><a href="login.html" class="nav-link">خروج</a></li>
                             </ul>
                         </div>
-
-                        <!-- BEST SELLERS -->
-
-                        <div class="best">
-                            <h4>بهترین فروشندگان</h4>
-                            <div class="best-product-list">
-                                <div class="best-product-item">
-                                    <img src="./assets/img/logo/product_img_01-800x1067.jpg" alt="">
-                                    <div>
-                                        <p>ریمل حجم دهنده مشکی</p>
-                                        <span>تومان 85،000 </span>
-                                    </div>
+                    </div>
+                    <div class="col-sm-12 col-md-9 col-lg-9">
+                        <!-- Tab panes -->
+                        <div class="tab-content dashboard_content">
+                            <div class="tab-pane fade active show" id="dashboard">
+                                <h3>داشبورد </h3>
+                                <p>از پنل مدیریتی می توانید سفارشات اخیرخود را به راحتی بررسی کرده و
+                                    مشاهده کنید ، آدرس های حمل و نقل و صورتحساب خود را مدیریت کرده و 
+                                        رمز عبور و جزئیات حساب خود را ویرایش کنید.</p>
+                            </div>
+                            <div class="tab-pane fade" id="orders">
+                                <h3>سفارشات</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>سفارش</th>
+                                                <th>تاریخ</th>
+                                                <th>وضعیت</th>
+                                                <th>جمع</th>
+                                                <th>اقدامات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>12 خرداد 1400</td>
+                                                <td><span class="success">تکمیل شد</span></td>
+                                                <td>2500 تومان</td>
+                                                <td><a href="cart.html" class="view">مشاهده</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>12 خرداد 1400</td>
+                                                <td>در حال پردازش</td>
+                                                <td>2500 تومان </td>
+                                                <td><a href="cart.html" class="view">مشاهده</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="best-product-item">
-                                    <img src="./assets/img/logo/product_img_02-800x1067.jpg" alt="">
-                                    <div>
-                                        <p>ریمل حجم دهنده مشکی</p>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                                <div class="best-product-item">
-                                    <img src="./assets/img/logo/product_img_03-800x1067.jpg" alt="">
-                                    <div>
-                                        <p>ریمل حجم دهنده مشکی</p>
-                                        <span>تومان 85،000 </span>
+                            </div>
+
+                            <div class="tab-pane" id="address">
+                                <p>آدرس های زیر به طور پیش فرض در صفحه پرداخت استفاده می شود.</p>
+                                <a href="#" class="view">ویرایش کنید</a>
+                                <address>
+                                    بلوک شماره 15 
+                                </address>
+                                <p>ایران</p>
+                            </div>
+                            <div class="tab-pane fade" id="account-details">
+                                <h3>جزئیات حساب </h3>
+                                <div class="login-parent">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form action="#">
+                                                <p>قبلاً حساب دارید؟ <a href="#">در عوض وارد شوید</a></p>
+                                                <div class="input-radio">
+                                                    <span class="custom-radio"><input type="radio" value="1"
+                                                            name="id_gender"> آقا</span>
+                                                    <span class="custom-radio"><input type="radio" value="1"
+                                                            name="id_gender"> خانم</span>
+                                                </div> <br>
+                                                <label>نام کاربری</label>
+                                                <input type="text" name="first-name" class="inp">
+                                                <label>نام خانوادگی</label>
+                                                <input type="text" name="last-name" class="inp">
+                                                <label>پست الکترونیک</label>
+                                                <input type="text" name="email-name" class="inp">
+                                                <label>کلمه عبور</label>
+                                                <input type="password" name="user-password" class="inp">
+                                                <label>تاریخ تولد</label>
+                                                <input type="text" class="inp" placeholder="سال/ماه/روز" value="" name="birthday">
+                                                
+                                                <br>
+                                                <div class="save_button primary_btn default_button">
+                                                    <button type="submit" class="submit">ذخیره</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 col-lg-8">
-                    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-3">
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_09_02-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_08-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <del>تومان 185،000</del>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_07-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_09_02-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <del>تومان 185،000</del>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_08-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="" class="product-card">
-                                <div class="product-image"><img src="./assets/img/logo/product_img_07-800x1067.jpg"
-                                        alt=""><button>افزودن به سبد خرید</button></div>
-                                <div class="product-info">
-                                    <p>ست 3 براش - کیت سه نفره چشم</p>
-                                    <div>
-                                        <span>تومان 85،000 </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <!-- pagination -->
-                        <div class="pagination-section">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                
-                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                      <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </nav>
-                        </div>
-                        
-                    </div>
-                </div>
-                
             </div>
         </div>
     </section>
 
-    <!-- end shop sectopn -->
+    <!-- end account -->
 
 
 
@@ -382,6 +329,7 @@
 
 
     <!-- scripts -->
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script>
 
@@ -411,6 +359,12 @@
         function menuhandle() {
             menu.classList.toggle('open')
         }
+
+
+        $('#nav-tab a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
 
     </script>
 </body>
