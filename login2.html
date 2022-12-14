@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col-2 col-lg-4 text-end">
-                        <div class="logo"><a href=""><img src="./assets/img/logo/IMG_0695-removebg-preview.png"
+                        <div class="logo"><a href=""><img src="./assets/img/IMG_0695-removebg-preview.png"
                                     alt=""></a></div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="col-8 text-end">
-                        <div class="logo"><a href=""><img src="./assets/img/logo/IMG_0695-removebg-preview.png"
+                        <div class="logo"><a href=""><img src="./assets/img/IMG_0695-removebg-preview.png"
                                     alt=""></a></div>
                     </div>
                 </div>
@@ -104,38 +104,27 @@
 
     <!-- end header -->
 
-    <!-- start banner -->
-
-    <section id="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="banner-detals">
-                        <h1>ثبت نام</h1>
-                        <p>خانه / <span>ثبت نام</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end banner -->
-
-
     <!-- start login -->
 
-    <section id="login">
+    <section id="logined">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div>
-                        <h3>ثبت نام</h3>
+                        <h3 class="text-white text-center mb-3">ورود</h3>
                     </div>
-                    <div class="login-section">
+                    <div class="login-box">
                         <form action="">
-                            <div><label for=""> ایمیل *</label><input type="text" placeholder="sampel@gmail.com"></div>
-                            <div><label for="">کلمه عبور *</label><input type="password" placeholder="********"></div>
-                            <div><button class="login">ثبت نام</button></div>
+                            <div class="user-box">
+                                <input type="text" name="" required="">
+                                <label>ایمیل / نام کاریری <span>*</span></label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password">
+                                <label for="">رمز عبور <span>*</span></label>
+                            </div>
+                            <div><a href="" class="forget-password">رمزعبور خود را گم کردید؟</a></div>
+                            <button>ورود</button>
                         </form>
                     </div>
                 </div>
@@ -169,7 +158,7 @@
                         </div>
                     </div>
                     <div class="col text-center">
-                        <div class="logo"><a href=""><img src="./assets/img/logo/IMG_0695-removebg-preview.png"
+                        <div class="logo"><a href=""><img src="./assets/img/IMG_0695-removebg-preview.png"
                                     alt=""></a></div>
                     </div>
                     <div class="col text-center">
@@ -194,7 +183,7 @@
                             <div class="col">
                                 <div class="contact-info">
                                     <div>
-                                        <img src="./assets/img/logo/icon_11.png" alt="">
+                                        <img src="./assets/img/icon_11.png" alt="">
                                     </div>
                                     <h6>leilamoammer.ir</h6>
                                 </div>
@@ -202,7 +191,7 @@
                             <div class="col">
                                 <div class="contact-info">
                                     <div>
-                                        <img src="./assets/img/logo/icon_12.png" alt="">
+                                        <img src="./assets/img/icon_12.png" alt="">
                                     </div>
                                     <h6>نازی آباد. خیابان بابایی(مدائن) .جنب پاساژ کویتیها.پلاک ۱۷۷.طبقه سو</h6>
                                 </div>
@@ -210,7 +199,7 @@
                             <div class="col">
                                 <div class="contact-info">
                                     <div>
-                                        <img src="./assets/img/logo/icon_13.png" alt="">
+                                        <img src="./assets/img/icon_13.png" alt="">
                                     </div>
                                     <h6>۰۹۱۹۱۵۷۱۹۴۲</h6>
                                 </div>
@@ -244,34 +233,8 @@
 
     <!-- scripts -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script>
-
-        //scroll-top
-
-        let scroll_btn = document.querySelector('#back_to_top')
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scroll_btn.classList.add('opacity')
-            } else {
-                scroll_btn.classList.remove('opacity')
-            }
-        })
-
-
-
-
-
-        // menu
-        let openBtn = document.querySelector('.open-btn')
-        let menu = document.querySelector('.menu')
-        let close = document.querySelector('.close-btn')
-
-        openBtn.addEventListener('click', menuhandle)
-        close.addEventListener('click', menuhandle)
-
-        function menuhandle() {
-            menu.classList.toggle('open')
-        }
 
     </script>
 </body>

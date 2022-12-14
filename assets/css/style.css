@@ -90,6 +90,7 @@ header {
     font-size: 20px;
     transform: translateY(5px);
     position: relative;
+    display: inline-block;
 }
 
 .user-btn {
@@ -98,6 +99,7 @@ header {
     transform: translateY(5px);
     position: relative;
     margin-right: 20px;
+    display: inline-block;
 }
 
 .menu-btn {
@@ -176,11 +178,36 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease;
+    transition: all .3s linear;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-details a::before,
+.about-details a::after {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.about-details a::after {
+    /*background-color: #f00;*/
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(40deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.about-details a:hover:after {
+    height: 100%;
+    width: 135%;
 }
 
 .about-details a:hover {
-    background-color: #fff;
     color: #2C2C2C;
 }
 
@@ -526,20 +553,23 @@ input#slider::-ms-tooltip {
 }
 
 .see-more {
+    text-transform: uppercase;
     padding: 13px 30px;
-    background-color: #FBBAA1;
-    border: 1px solid #FBBAA1;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     font-size: 14px;
-    transition: all .3s ease;
+    transition: all .6s ease;
+    color: #fff;
+    border: 3px solid #FBBAA1;
+    background-image: -webkit-linear-gradient(30deg, #FBBAA1 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #FBBAA1 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
 }
 
 .see-more:hover {
-    background-color: transparent;
-    color: #fff;
+    background-position: 100%;
+    color: #FBBAA1;
 }
 
 .portfolio-heading {
@@ -751,20 +781,22 @@ input#slider::-ms-tooltip {
 }
 
 .book {
-    background-color: #2c2c2c;
+    background-image: -webkit-linear-gradient(30deg, #2c2c2c 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #2c2c2c 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
     padding: 13px 38px 13px 38px;
     border-style: solid;
     border-color: #2c2c2c;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     color: #fff;
     margin-top: 30px;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
 }
 
 .book:hover {
-    background-color: transparent;
+    background-position: 100%;
     color: #2C2C2C;
 }
 
@@ -957,19 +989,23 @@ input#slider::-ms-tooltip {
     justify-content: center;
 }
 
-.heading button {
-    background-color: #2c2c2c;
+.heading a {
+    background-image: -webkit-linear-gradient(30deg, #2c2c2c 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #2c2c2c 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
     padding: 13px 38px 13px 38px;
     border-style: solid;
     border-color: #2c2c2c;
+    display: inline-block;
     color: #fff;
-    font-size: 14px;
-    margin-top: 25px;
-    transition: all .3s ease;
+    margin-top: 30px;
+    transition: all .3s ease-in-out;
 }
 
-.heading button:hover {
-    background-color: transparent;
+.heading a:hover {
+    background-position: 100%;
     color: #2C2C2C;
 }
 
@@ -1132,7 +1168,7 @@ footer {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/logo/rev_slider_2_01.jpg);
+    background-image: url(../img/rev_slider_2_01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
@@ -1164,16 +1200,40 @@ footer {
 }
 
 .start a {
-    background-color: rgb(251, 186, 161);
     color: rgb(255, 255, 255);
+    background-color: transparent;
     border: 1px solid rgb(251, 186, 161);
     padding: 12px 30px;
-    transition: all .3s ease;
+    transition: all .3s linear;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 
-.start a:hover {
-    background-color: transparent;
+.start a::before,
+.start a::after {
+    background: rgb(251, 186, 161);
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
+
+.start a::after {
+    /*background-color: #f00;*/
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(40deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.start a:hover:after {
+    height: 100%;
+    width: 135%;
+}
+
 
 .people {
     display: flex;
@@ -1259,7 +1319,7 @@ footer {
     height: 0;
     background-color: #212020;
     visibility: hidden;
-    transition: all .6s ease;
+    transition: all .6s linear;
     overflow: hidden;
     z-index: 100;
     padding-top: 70px;
@@ -1681,7 +1741,7 @@ footer {
 /* shop */
 #banner {
     width: 100%;
-    background-image: url(../img/logo/page_title_shop.jpg);
+    background-image: url(../img/page_title_shop.jpg);
     background-color: rgb(44, 44, 44);
     height: 380px;
     color: rgb(255, 255, 255);
@@ -2203,7 +2263,6 @@ footer {
 
 @media only screen and (max-width: 767px) {
     .product_variant.quantity button {
-        min-width: inherit;
         margin-right: 10px;
     }
 }
@@ -2596,6 +2655,7 @@ footer {
 .reviews_comment_box {
     display: flex;
     margin-bottom: 22px;
+    flex-direction: column;
 }
 
 .reviews_comment_box .comment_text {
@@ -3477,7 +3537,7 @@ footer {
     position: relative;
     padding: 30px 0;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
 }
 
 .hour-content {
@@ -3626,18 +3686,26 @@ textarea {
     height: 50px;
 }
 
-.submit {
-    width: 60%;
-    height: 58px;
-    background-color: #FBBAA1;
+.submit,.total-box button{
+    text-transform: uppercase;
+    padding: 13px 50px;
+    display: inline-block;
+    font-size: 14px;
+    transition: all .6s ease;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    margin: 20px auto;
+    border: 3px solid #FBBAA1;
+    background-image: -webkit-linear-gradient(30deg, #FBBAA1 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #FBBAA1 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    margin-top: 30px;
+}
+
+.submit:hover,.total-box button:hover{
+    background-position: 100%;
+    color: #faa787;
+    background-color: transparent;
 }
 
 #reserv h3 {
@@ -3658,7 +3726,7 @@ textarea {
         width: 100%;
         height: 550px;
     }
-
+    
     .experince ul {
         display: flex;
         align-items: center;
@@ -3904,8 +3972,7 @@ tbody tr td .quantity input {
 }
 
 .coupon-box button:hover {
-    background-color: #FBBAA1;
-
+    opacity: .7;
 }
 
 .coupon {
@@ -3940,21 +4007,6 @@ tbody tr td .quantity input {
     opacity: .8;
 }
 
-.total-box button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 230px;
-    height: 50px;
-    background-color: #FBBAA1;
-    color: #fff;
-    border: none;
-
-}
-
-.total-box button:hover {
-    background-color: #2C2C2C;
-}
 
 @media screen and (max-width:500px) {
     tbody tr td img {
@@ -4021,13 +4073,13 @@ tbody tr td .quantity input {
 
 #works {
     background: #fafafa
-        /* background-image: url(../img/logo/bg_about_us_01.jpg);
+        /* background-image: url(../img/bg_about_us_01.jpg);
     background-repeat: no-repeat;
     background-size: cover; */
 }
 
 #about-desciption {
-    background-image: url(../img/logo/bg_about_us_03.png);
+    background-image: url(../img/bg_about_us_03.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -4147,8 +4199,10 @@ tbody tr td .quantity input {
 }
 
 .forget-password {
-    color: #f76b6b;
-    font-size: 14px;
+    color: #FBBAA1;
+    font-size: 12px;
+    transform: translateY(-15px);
+    display: inline-block;
 }
 
 .login {
@@ -4306,9 +4360,6 @@ table.finall-product tbody tr td span {
     margin: 20px 0;
 }
 
-.submit:hover {
-    background-color: #2C2C2C;
-}
 
 .user-actions h3 {
     font-size: 13px;
@@ -4377,7 +4428,7 @@ table.finall-product tbody tr td span {
 #contact,
 #biography,
 .product_details,
-#profile {
+#profile,#contact ,#shop{
     padding-top: 0;
 }
 
@@ -4544,6 +4595,15 @@ table.finall-product tbody tr td span {
     .table-responsive td {
         font-size: 12px;
     }
+
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .login_signup {
+        font-size: 11px
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -4553,5 +4613,196 @@ table.finall-product tbody tr td span {
 
     .mobile-header {
         display: block;
+    }
+
+    .product-image button {
+        font-size: 11px
+    }
+}
+
+.login_signup {
+    font-size: 13px;
+    background-color: #FBBAA1;
+    margin-right: 20px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    transition: all .3s ease;
+}
+
+.login_signup:hover {
+    background-color: #fff;
+    color: #FBBAA1;
+}
+
+.cart-btn:hover,
+.close-btn:hover {
+    color: #fff;
+}
+
+
+
+
+
+#logined {
+    width: 110%;
+    height: 100vh;
+    background-color: #0000;
+    background-image: url(../img/rev_slider_2_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 130px;
+    padding-top: 150px;
+}
+
+#logined .login-section {
+    background-color: #55545461;
+    width: 40%;
+    backdrop-filter: blur(50px);
+    border: none;
+}
+
+
+
+
+
+.login-box {
+    width: 400px;
+    padding: 40px;
+    background: #05050546;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.77);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+
+}
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #F1EEE6;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: .5px solid #F1EEE6;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #F1EEE6;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label {
+    top: -20px;
+    left: 0px;
+    color: #FBBAA1;
+    font-size: 12px;
+}
+
+
+.login-box button {
+    overflow: hidden;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: 1em auto;
+    width: 100%;
+    height: 48px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.login-box button::before,
+.login-box button::after {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.login-box button::after {
+    /*background-color: #f00;*/
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.login-box button:hover:after {
+    height: 100%;
+    width: 135%;
+}
+.login-box button:hover{
+    color: #2C2C2C;
+}
+.user-box label span{
+    color: #f49570;
+    font-size: 12px;
+}
+@media screen and (max-width:700px) {
+    #logined {
+        width: 100%;
+        height: 70vh;
+        align-items: flex-end;
+        padding-bottom: 30px;
+        background-position: 0 0;
+    }
+    .login-box {
+        width: 100%;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    #logined.h-100vh{
+        height: 90vh;
+    }
+    .number-item h5{
+        font-size: 30px;
+    }
+    .number-item p{
+        font-size: 16px;
+    }
+    #about-desciption{
+        padding-top: 0;
+    }
+}
+@media screen and (min-width:700px) and (max-width:1100px) {
+    #logined {
+        align-items: flex-end;
+        padding-bottom: 30px;
+        width: 110%;
+        background-position: 0 0;
+        height: auto;
+    }
+    #logined.h-100vh{
+        height: auto;
+        padding-top: 200px;
+    }
+
+    .login-box {
+        width: 65%;
+        box-shadow: none;
+        background-color: transparent;
     }
 }
