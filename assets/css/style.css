@@ -3326,7 +3326,9 @@ footer {
 .team-member:hover .member-img img {
     transform: scale(1.055);
 }
-
+#reserv .reserv-form{
+    padding-right: 25px;
+}
 @media screen and (max-width:500px) {
     .our-team h3 {
         font-size: 25px;
@@ -3347,6 +3349,10 @@ footer {
         width: 90%;
         margin: 10px auto;
     }
+    #reserv .reserv-form{
+        padding-right: 0;
+    }
+    
 }
 
 @media screen and (max-width:768px) {
@@ -3359,14 +3365,16 @@ footer {
         font-size: 13px;
         width: 95%;
     }
-
+    #reserv .reserv-form{
+        padding-right: 0;
+    }
 }
 
 
 /* about-member */
 #biography img {
     width: 90%;
-    height: 650px;
+    height: 580px;
     object-fit: cover;
 }
 
