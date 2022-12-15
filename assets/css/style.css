@@ -550,6 +550,10 @@ input#slider::-ms-tooltip {
     color: #fff;
     background: linear-gradient(to bottom, #2c2c2c 80%, #fafafa 20%);
 }
+#teams {
+    color: #fff;
+    background: linear-gradient(to bottom, #2c2c2c 80%, #fff 20%);
+}
 
 .see-more {
     text-transform: uppercase;
