@@ -105,6 +105,7 @@ header {
 .menu-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .cart-badge {
@@ -351,7 +352,6 @@ figure {
     background-size: cover;
     cursor: pointer;
     background-repeat: no-repeat;
-    background-position: 50%;
     height: 100%;
 }
 
@@ -369,7 +369,6 @@ figure:hover::after {
 }
 
 #compare {
-    background-size: cover;
     bottom: 0;
     height: 100%;
     display: block;
@@ -645,7 +644,7 @@ input#slider::-ms-tooltip {
 @media screen and (max-width:500px) {
     .tab ul li {
         font-size: 12px;
-        padding: 10px 22px;
+        padding: 10px 18px;
         border-bottom: 2px solid transparent;
         cursor: pointer;
     }
@@ -945,7 +944,7 @@ input#slider::-ms-tooltip {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background-image: conic-gradient(#FBBAA1 70%, transparent 0);
+    background-image: conic-gradient(#FBBAA1 var(--i), transparent 0);
     transition: transform .5s ease-in-out;
     z-index: 1;
     transform: rotate(-180deg);
@@ -1331,8 +1330,8 @@ footer {
 .close-btn {
     color: #fff;
     position: absolute;
-    top: 40px;
-    right: 15px;
+    top: 35px;
+    right: 25px;
     font-size: 20px;
 }
 
@@ -1416,13 +1415,28 @@ footer {
     .item p {
         font-size: 12px;
     }
-
+    #compare span{
+        width: 30px;
+        height: 30px;
+        border-width: 2px;
+    }
+    #compare span::before,#compare span::after{
+        width: 2px;
+    }
+    #compare span i{
+        font-size: 8px;
+    }
     .before-after {
-        width: 90%;
+        width: 100%;
         height: 200px;
         margin-bottom: 0;
     }
-
+    #work{
+        padding-bottom: 0;
+    }
+    #back_to_top{
+        right: 25px;
+    }
     figure {
         background-repeat: no-repeat;
         background-size: cover;
@@ -1530,12 +1544,20 @@ footer {
     .user-btn {
         transform: translateY(0);
     }
-
+    .checkout_info form{
+        display: flex;
+    }
+    .assistant .col:nth-child(2) .member-info,.assistant .col:nth-child(1) .member-info{
+        color: #fff;
+    }
 }
 
 @media screen and (min-width:500px) and (max-width:768px) {
     .start p {
         width: 70%;
+    }
+    .assistant .col:nth-child(3) .member-info,.assistant .col:nth-child(2) .member-info,.assistant .col:nth-child(1) .member-info{
+        color: #fff;
     }
 
     .logo img {
@@ -1675,7 +1697,6 @@ footer {
 
     .before-after {
         width: auto;
-        height: 300px;
         margin-bottom: 0;
         text-align: center;
     }
@@ -1684,7 +1705,6 @@ footer {
         width: 100%;
         background-repeat: no-repeat;
         background-size: contain;
-        transform: translateX(70px);
     }
 
     #compare {
@@ -3379,7 +3399,7 @@ footer {
 /* about-member */
 #biography img {
     width: 90%;
-    height: 500px;
+    height: 530px;
     object-fit: cover;
 }
 
@@ -3737,7 +3757,10 @@ textarea {
 @media screen and (max-width:500px) {
     #biography img {
         width: 100%;
-        height: 550px;
+        height: 500px;
+    }
+    #cart .product_variant.quantity input{
+        width: 30px;
     }
     
     .experince ul {
@@ -4184,6 +4207,12 @@ tbody tr td .quantity input {
     .descriptions-section>div {
         width: 100%;
     }
+    .member-img img{
+        height: 350px;
+    }
+    .member-info{
+        padding: 8px;
+    }
 }
 
 /* login */
@@ -4382,7 +4411,10 @@ table.finall-product tbody tr td span {
     border-top: 3px solid #E88888;
     margin-bottom: 0;
 }
-
+.reviews_comment_box .comment_text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .user-actions h3 a {
     color: #E88888;
 }
@@ -4456,6 +4488,10 @@ table.finall-product tbody tr td span {
 
     #zoom1 {
         width: 100%;
+        height: 400px;
+    }
+    .reviews_comment_box .comment_text{
+        margin-right: 0;
     }
 }
 
@@ -4661,7 +4697,7 @@ table.finall-product tbody tr td span {
 
 #logined {
     width: 110%;
-    height: 100vh;
+    height: 110vh;
     background-color: #0000;
     background-image: url(../img/rev_slider_2_01.jpg);
     background-repeat: no-repeat;
@@ -4782,6 +4818,13 @@ table.finall-product tbody tr td span {
         padding-bottom: 30px;
         background-position: 0 0;
     }
+    .product_variant.quantity button{
+        min-width: 220px;
+
+    }
+    .product-image button{
+        padding: 12px;
+    }
     .login-box {
         width: 100%;
         box-shadow: none;
@@ -4799,6 +4842,9 @@ table.finall-product tbody tr td span {
     #about-desciption{
         padding-top: 0;
     }
+    .login-box{
+        padding: 20px;
+    }
 }
 @media screen and (min-width:700px) and (max-width:1100px) {
     #logined {
@@ -4812,10 +4858,54 @@ table.finall-product tbody tr td span {
         height: auto;
         padding-top: 200px;
     }
-
     .login-box {
         width: 65%;
         box-shadow: none;
         background-color: transparent;
     }
+}
+.link-text p{
+    text-align: center;
+    font-size: 13px;
+    color: #f7f6f7;
+    margin: 0;
+    margin-top: 20px;
+}
+.link-text p a{
+    color: #f49570;
+}
+.team-item ul{
+    padding: 0;
+}
+.product_d_right{
+    position: relative;
+    z-index: 1000;
+}
+.assistant .member-img img{
+    height: 300px;
+}
+.assistant .team-item{
+    height: 350px;
+}
+@media screen and (min-width: 768px) and (max-width: 997px){
+.before-after {
+    width: 100%;
+    height: 350px;
+}
+figure {
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(0);
+
+}
+}
+@media screen and (max-width: 767px){
+.before-after {
+    margin: 0;
+    height: 200px;
+}
+figure {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }

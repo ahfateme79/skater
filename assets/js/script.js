@@ -87,3 +87,11 @@ hour_content.forEach(n => {
         hour_inp.value = n.innerHTML
     })
 })
+
+
+let skill = document.querySelectorAll('.skill-item div::before')
+
+skill.forEach(n => {
+    n.style.backgroundImage = `conic-gradient(#FBBAA1 ${n.parentElement.dataset.num}, transparent 0)`
+})
+
