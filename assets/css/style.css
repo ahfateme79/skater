@@ -820,6 +820,8 @@ input#slider::-ms-tooltip {
     overflow: hidden;
     height: 400px;
     cursor: pointer;
+    display: block;
+    width: 100%;
 }
 
 .team-item::after {
@@ -840,7 +842,7 @@ input#slider::-ms-tooltip {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     z-index: 100;
     transition: all .5s ease;
@@ -852,6 +854,7 @@ input#slider::-ms-tooltip {
 
 .team-item ul li a {
     color: #fafafa;
+    display: inline;
 }
 
 .team-item ul li a:hover {
