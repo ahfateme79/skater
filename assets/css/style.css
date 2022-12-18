@@ -3415,15 +3415,21 @@ footer {
 .hour-inp {
     width: 100%;
 }
-
-.hour-inp input {
-    border: 1px solid #d4d4d4;
+.hour-inp form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
+}
+.hour-inp input{
+    border: 1px solid #d4d4d4;
     height: 35px;
     outline: none;
     padding: 0 8px;
+    width: 47%;
 }
 
 .hour-inp input::placeholder {
@@ -3573,21 +3579,22 @@ footer {
     position: relative;
     padding: 30px 0;
     width: 100%;
-    min-height: 150px;
+    height: fit-content;
 }
 
 .hour-content {
-    position: absolute;
     width: 100%;
-    height: fit-content;
+    height:0;
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
+    overflow: hidden;
 }
 
 .hour-content.active {
     visibility: visible;
     opacity: 1;
+    height: fit-content;
 }
 
 .hour-content form {
