@@ -182,9 +182,8 @@
 
     <!-- start video section -->
 
-    <div class="video-fluid bg_img" data-background="./assets/img/video-bg-2.jpg"
-        style="background-image: url(&quot;./assets/img/video-bg-2.jpg&quot;);">
-        <video src=""></video>
+    <div class="video-fluid bg_img">
+        <video src="./assets/video/_The_story_of_my_life_@sharghdaily1_داستان_زندگی_من_مربوط_به_سال.mp4"></video>
         <button class="video-button large popup">
             <i class="fa-solid fa-play"></i>
         </button>
@@ -538,27 +537,51 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script>
         $('.gallery-slider').owlCarousel({
-      loop: false,
-      margin: 30,
-      responsiveClass: true,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: false,
-      items: 1,
-      responsive: {
-        500: {
-          items: 2,
-        },
-        768: {
-          items: 3,
-        },
-        992: {
-          items: 4
-        }
-      }
-    })
+            loop: false,
+            margin: 30,
+            responsiveClass: true,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: false,
+            items: 1,
+            responsive: {
+                500: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                992: {
+                    items: 4
+                }
+            }
+        })
+
+
+
+
+        let btn_play = document.querySelector('.video-button')
+        let video = document.querySelector('video')
+
+        btn_play.addEventListener('click', () => {
+            if (video.paused) {
+                btn_play.querySelector('i').classList.replace('fa-play', 'fa-pause')
+                btn_play.style.opacity = '0'
+                video.play()
+            } else {
+                btn_play.querySelector('i').classList.replace('fa-pause', 'fa-play')
+                btn_play.style.opacity = '1'
+                video.pause()
+            }
+        })
+
+        video.addEventListener('click', () => {
+            btn_play.style.opacity = '1'
+                video.pause()
+        })
+
     </script>
 
 </body>
