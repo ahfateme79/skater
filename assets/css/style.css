@@ -67,7 +67,7 @@ a {
 }
 
 .banner-section {
-    padding: 290px 0 210px;
+    padding: 200px 0 150px;
     position: relative;
     overflow: hidden;
 }
@@ -207,7 +207,7 @@ a {
 
     .banner-thumb img {
         width: 600px;
-        transform: translate(50px, 150px);
+        transform: translate(50px, 100px);
     }
 }
 
@@ -1528,7 +1528,14 @@ ul li {
 .owl-dots .owl-dot.active::after {
     background: #08d565;
 }
-
+.banner-content .sign {
+    margin-bottom: 80px;
+}
+.banner-content .sign img {
+    /* width: 200px;
+    height: 100px;
+    object-fit: cover; */
+}
 .owl-dots .owl-dot::after {
     width: 100%;
     left: 0;
@@ -1609,6 +1616,9 @@ video {
     .banner-section {
         padding: 150px 0 0;
     }
+    .banner-content .sign{
+        margin-bottom: 0;
+    }
 }
 
 
@@ -1659,4 +1669,9 @@ video {
 }
 .owl-dot:nth-of-type(n+6) {
     display: none !important;
+}
+.owl-carousel .owl-item img{
+    width: 100%;
+    height: 296px;
+    object-fit: cover;
 }
