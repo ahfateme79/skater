@@ -67,7 +67,7 @@ a {
 }
 
 .banner-section {
-    padding: 200px 0 150px;
+    padding: 290px 0 210px;
     position: relative;
     overflow: hidden;
 }
@@ -207,7 +207,7 @@ a {
 
     .banner-thumb img {
         width: 600px;
-        transform: translate(50px, 50px);
+        transform: translate(50px, 170px);
     }
 }
 
@@ -278,6 +278,7 @@ a {
 .custom-button {
     color: #08d565;
     font-size: 20px;
+    font-family: sans-serif
 }
 
 .information-section {
@@ -1646,7 +1647,7 @@ video {
         display: none;
     }
     .banner-section {
-        padding: 150px 0 0;
+        padding:50px 0 0 0 ;
     }
     .banner-shape.shape-1 {
         left: 16px;
@@ -1663,6 +1664,11 @@ video {
     .banner-content .title {
         font-size: 50px;
         line-height: 65px;
+    }
+    .video-button.large{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 .owl-dot:nth-of-type(n+6) {
