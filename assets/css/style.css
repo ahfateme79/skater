@@ -207,7 +207,7 @@ a {
 
     .banner-thumb img {
         width: 600px;
-        transform: translate(50px, 100px);
+        transform: translate(50px, 50px);
     }
 }
 
@@ -1532,9 +1532,7 @@ ul li {
     margin-bottom: 80px;
 }
 .banner-content .sign img {
-    /* width: 200px;
-    height: 100px;
-    object-fit: cover; */
+    transform: scale(.7);
 }
 .owl-dots .owl-dot::after {
     width: 100%;
