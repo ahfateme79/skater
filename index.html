@@ -452,7 +452,7 @@
                 <div class="award-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="award-thumb">
                         <div class="thumb">
-                            <img src="./assets/img/01.png" alt="award">
+                            <img src="./assets/img/IMG_1460.jpg" alt="award">
                         </div>
                         <div class="cont">
                             <span>x</span> 03
@@ -460,15 +460,13 @@
                     </div>
                     <div class="award-content">
                         <h4 class="title">Player of the year</h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                            also reproduced in their</p>
+                        <p>1st place in Tehran province skating olympiad in 2022 in the roller alpine discipline</p>
                     </div>
                 </div>
                 <div class="award-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="award-thumb">
                         <div class="thumb">
-                            <img src="./assets/img/02.png" alt="award">
+                            <img src="./assets/img/IMG_1461.jpg" alt="award">
                         </div>
                         <div class="cont">
                             <span>x</span> 01
@@ -476,15 +474,14 @@
                     </div>
                     <div class="award-content">
                         <h4 class="title">FIFL the Best Player</h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                            also reproduced in their</p>
+                        <p>The first place for adults in the national freestyle competitions in 2018 in the roller
+                            alpine category in the Downhill category</p>
                     </div>
                 </div>
                 <div class="award-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="award-thumb">
                         <div class="thumb">
-                            <img src="./assets/img/03.png" alt="award">
+                            <img src="./assets/img/IMG_1463.jpg" alt="award">
                         </div>
                         <div class="cont">
                             <span>x</span> 97
@@ -492,9 +489,21 @@
                     </div>
                     <div class="award-content">
                         <h4 class="title">Man of the Match</h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                            also reproduced in their</p>
+                        <p>2nd place for seniors in Inline downhill Championship League in 2018</p>
+                    </div>
+                </div>
+                <div class="award-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="award-thumb">
+                        <div class="thumb">
+                            <img src="./assets/img/IMG_1464.jpg" alt="award">
+                        </div>
+                        <div class="cont">
+                            <span>x</span> 97
+                        </div>
+                    </div>
+                    <div class="award-content">
+                        <h4 class="title">Man of the Match</h4>
+                        <p>3nd place for seniors in roller alpine Championship League in 2018</p>
                     </div>
                 </div>
             </div>
@@ -502,6 +511,38 @@
     </section>
 
     <!-- end award -->
+
+
+    <!-- sponsers -->
+
+    <div class="partner-section padding-bottom">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">
+                    <span class="shape"><span>My</span></span> <span>Sponsers</span>
+                </h2>
+            </div>
+            <div class="partner-slider owl-theme owl-carousel">
+                <div class="partner-item">
+                   <h4>olimpuae</h4>
+                </div>
+                <div class="partner-item">
+                    <h4>banikan.shop</h4>
+                </div>
+                <div class="partner-item">
+                    <h4>hypeenergyuae</h4>
+                </div>
+                <div class="partner-item">
+                    <h4>nomorelegennds</h4>
+                </div>
+                <div class="partner-item">
+                    <h4>geneticgroupuae</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sponsers -->
 
 
     <!-- start footer -->
@@ -555,8 +596,30 @@
             }
         })
 
-
-
+        $('.partner-slider').owlCarousel({
+      loop: true,
+      margin: 30,
+      responsiveClass: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        500: {
+          items: 2,
+        },
+        768: {
+          items: 3,
+        },
+        992: {
+          items: 4
+        }
+      }
+    })
 
         let btn_play = document.querySelector('.video-button')
         let video = document.querySelector('video')
@@ -575,8 +638,11 @@
 
         video.addEventListener('click', () => {
             btn_play.style.opacity = '1'
-                video.pause()
+            video.pause()
         })
+
+
+
 
     </script>
 
