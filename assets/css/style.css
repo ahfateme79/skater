@@ -1672,7 +1672,6 @@ video {
     object-fit: cover;
 }
 .partner-item {
-    height: 90px;
     align-items: center;
     justify-content: center;
     padding: 0 15px;

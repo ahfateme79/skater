@@ -125,6 +125,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-content">
+                        <div class="col-lg-6 wow fadeInRight mb-5 d-lg-none" data-wow-delay=".5s" data-wow-duration="1s"
+                            style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInRight;">
+                            <img src="./assets/img/IMG_1430.JPG" alt="">
+                        </div>
                         <p class="header-para">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                             roots in a piece of classical Latin literature from 45 BC, making it over 2000 year Richard
                             McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
@@ -170,7 +174,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInRight d-none d-lg-block" data-wow-delay=".5s" data-wow-duration="1s"
                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInRight;">
-
+                    <img src="./assets/img/IMG_1430.JPG" alt="">
                 </div>
             </div>
         </div>
@@ -325,6 +329,15 @@
     </section>
 
     <!-- end achivement -->
+
+
+    <!-- gif -->
+
+    <section>
+        <video src="./assets/img/document_5873079816902676181.mp4" autoplay muted loop></video>
+    </section>
+
+    <!-- gif -->
 
 
     <!-- start gallery -->
@@ -524,19 +537,19 @@
             </div>
             <div class="partner-slider owl-theme owl-carousel">
                 <div class="partner-item">
-                   <h4>olimpuae</h4>
+                    <img src="./assets/img/photo_5870828017545231597_x.jpg" alt="">
                 </div>
                 <div class="partner-item">
-                    <h4>banikan.shop</h4>
+                    <img src="./assets/img/photo_5870828017545231596_y.jpg" alt="">
                 </div>
                 <div class="partner-item">
-                    <h4>hypeenergyuae</h4>
+                    <img src="./assets/img/photo_5870828017545231593_y.jpg" alt="">
                 </div>
                 <div class="partner-item">
-                    <h4>nomorelegennds</h4>
+                    <img src="./assets/img/photo_5870828017545231594_x.jpg" alt="">
                 </div>
                 <div class="partner-item">
-                    <h4>geneticgroupuae</h4>
+                    <img src="./assets/img/photo_5870828017545231595_y.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -553,7 +566,7 @@
                 <h3 class="title">Follow Me</h3>
                 <ul class="social-icons">
                     <li>
-                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#0"><i class="fab fa-whatsapp"></i></a>
                     </li>
                     <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
@@ -597,29 +610,29 @@
         })
 
         $('.partner-slider').owlCarousel({
-      loop: true,
-      margin: 30,
-      responsiveClass: true,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: false,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        500: {
-          items: 2,
-        },
-        768: {
-          items: 3,
-        },
-        992: {
-          items: 4
-        }
-      }
-    })
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                500: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                992: {
+                    items: 4
+                }
+            }
+        })
 
         let btn_play = document.querySelector('.video-button')
         let video = document.querySelector('video')
