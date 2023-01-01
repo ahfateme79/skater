@@ -1690,3 +1690,10 @@ video {
     text-transform: uppercase;
     opacity: .7;
 }
+.stickers{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
